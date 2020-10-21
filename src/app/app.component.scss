@@ -1,0 +1,48 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-size: 25px;
+}
+
+.square {
+  transition: transform 1s;
+
+  &:hover {
+    transform: scale(1.2);
+    color: #161515;
+    background-color: #db123c;
+  }
+}
+
+.result {
+  background-color: #1976d2;
+  color: #161515;
+  border-radius: 5px;
+  height: 20px;
+  margin: auto;
+  width: 100px;
+  transition: transform 2s;
+
+  &:hover {
+    transform: scale(1.5);
+    color: #161515;
+    background-color: #1be714;
+  }
+}
+
+.float-lower-left {
+  position:absolute;
+  bottom: 80px;
+  right:25%;
+  left:50%;
+  margin-left:-150px;
+  opacity: 0.8;
+  font-weight:bolder;
+}

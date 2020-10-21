@@ -1,0 +1,44 @@
+<div style="margin-top: 90px; text-align: center">
+    <div style="margin-left: 40px">
+      <label>Category: </label>
+      <p-dropdown appendTo="body" [filter]="true" [options]="categories"
+                  [(ngModel)]="category">
+      </p-dropdown>
+    </div>
+    <br>
+    <div style="margin-left: 60px">
+      <label>Type: </label>
+      <p-dropdown appendTo="body" [filter]="true" [options]="jokeType"
+                  [(ngModel)]="type" (onChange)="onTypeChange($event.value)">
+      </p-dropdown>
+    </div>
+    <br>
+
+        <p-checkbox name="group1" value="NSFW" [(ngModel)]="selectedFlags" inputId="ny"></p-checkbox>
+        <label>NSFW  </label>
+        <p-checkbox name="group1" value="Religious" [(ngModel)]="selectedFlags" inputId="sf"></p-checkbox>
+        <label>Religious  </label>
+        <p-checkbox name="group1" value="Political" [(ngModel)]="selectedFlags" inputId="la"></p-checkbox>
+        <label>Political  </label>
+        <p-checkbox name="group1" value="Racist" [(ngModel)]="selectedFlags" inputId="ch"></p-checkbox>
+        <label>Racist  </label>
+  <br>
+  <br>
+  <br>
+    <div>
+      <label><b>Content: </b></label>
+      <textarea [rows]="3" autoResize="autoResize" [cols]="30"
+                pInputTextarea [(ngModel)]="content"></textarea>
+    </div>
+    <br>
+    <div *ngIf="isDelivery">
+      <label><b>Delivery: </b></label>
+      <textarea [rows]="3" autoResize="autoResize" [cols]="30"
+                pInputTextarea [(ngModel)]="delivery"></textarea>
+    </div>
+  <br>
+  <br>
+  <p-button label="Submit" type="submit" icon="pi pi-check" (onClick)="submit()"></p-button>
+  <p-button  style="margin-left: 20px" type="button" label="Back" icon="pi pi-chevron-left" (onClick)="back()"></p-button>
+</div>
+

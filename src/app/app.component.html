@@ -1,0 +1,11 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span style="margin-left: 10px; align-content: center;">Joke Reader</span>
+  <button style="position: absolute; right: 140px;"
+          pButton type="button" class="p-button-success" icon="pi pi-plus" (click)="addJokes()" label="Add New Jokes"></button>
+  <button style="position: absolute; right: 0;"
+          pButton type="button" icon="pi pi-play" label="Play Jokes" (click)="jokeReader()"></button>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

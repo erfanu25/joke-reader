@@ -1,0 +1,35 @@
+<div style="margin-top: 90px; text-align: center">
+<div class="card">
+  <p-table [value]="jokes" [paginator]="true" [rows]="4" [showCurrentPageReport]="true"
+           currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+           [rowsPerPageOptions]="[4,10,15]">
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width: 500px;">Joke</th>
+        <th style="width: 300px;">Flags</th>
+        <th style="width: 100px;">Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-joke let-i="rowIndex">
+      <tr>
+        <td>{{joke.content}} <br> {{joke.delivery}}</td>
+        <td><span *ngFor="let flag of joke.flags">{{flag}}, </span></td>
+        <td>
+            <button type="button" pButton
+                    icon="pi pi-pencil"
+                    (click)="editJokes(i)"></button>
+            <button type="button" pButton style="margin-left: 5px"
+                    icon="pi pi-play"
+                    (click)="playJokes(i)"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+</div>
+
+<div class="float-lower-left">
+  Developed by Md. Erfan Ullah Bhuiyan
+</div>
+
+
