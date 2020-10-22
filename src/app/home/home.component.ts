@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['joke', index]);
   }
 
-  playJokes(joke): void {
-
+  playJokes(index): void {
+    this.router.navigate(['jokeReader', index]);
   }
 
 }

@@ -39,10 +39,14 @@
 
 .float-lower-left {
   position:absolute;
-  bottom: 80px;
+  bottom: 40px;
   right:25%;
   left:50%;
   margin-left:-150px;
   opacity: 0.8;
   font-weight:bolder;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
 }

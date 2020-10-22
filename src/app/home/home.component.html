@@ -5,14 +5,15 @@
            [rowsPerPageOptions]="[4,10,15]">
     <ng-template pTemplate="header">
       <tr>
-        <th style="width: 500px;">Joke</th>
+        <th style="width: 450px;">Joke</th>
         <th style="width: 300px;">Flags</th>
         <th style="width: 100px;">Actions</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-joke let-i="rowIndex">
       <tr>
-        <td>{{joke.content}} <br> {{joke.delivery}}</td>
+        <td><span style="color:#8ce566;">{{joke.content.substring(0, 50) + '.......'}}</span>   -
+          <span class="monospace">{{joke.category}} </span> <br> {{joke.delivery.substring(0, 100) + '.......'}}</td>
         <td><span *ngFor="let flag of joke.flags">{{flag}}, </span></td>
         <td>
             <button type="button" pButton

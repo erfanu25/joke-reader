@@ -1,11 +1,17 @@
 <br><br><br><br><br>
-<p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
+<div class="center">
+<p-card header="{{content}}" subheader="{{category}}" [style]="{width: '960px'}" styleClass="p-card-shadow">
   <p-header>
-    <img alt="Card" src="assets/showcase/images/usercard.png">
+
   </p-header>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-  <ng-template pTemplate="footer">
-    <p-button label="Save" icon="pi pi-check"></p-button>
-  </ng-template>
+  <span *ngFor="let flag of selectedFlags">{{flag}}, </span>
+  <br>
+  <p style="padding-top: 20px">{{delivery}}</p>
+  <p-footer>
+    <div style="margin-left: 700px">
+      <p-button label="Next" icon="pi pi-check" (onClick)="nextJoke()"></p-button>
+      <button pButton type="button" label="Back" class="p-button-danger" (click)="back()"></button>
+    </div>
+  </p-footer>
 </p-card>
+</div>

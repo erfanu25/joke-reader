@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'joke', component: JokeFormComponent },
   { path: 'joke/:id', component: JokeFormComponent },
   { path: 'jokeReader', component: JokeReaderComponent },
+  { path: 'jokeReader/:id', component: JokeReaderComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
