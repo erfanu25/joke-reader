@@ -1,6 +1,6 @@
 # JokeReader
 
-*To Run
+**To Run \
 npm install \
 ng serve
 
